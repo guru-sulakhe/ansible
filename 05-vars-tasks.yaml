@@ -1,0 +1,16 @@
+- name: two types variavles
+  hosts:  localhost
+  vars:
+    student: "Guru"
+    course: "AWS"
+    duration: "120hrs"
+  tasks:
+    - name: printing override variable
+      vars: #task level variable
+        course: "Devops"
+      ansible.builtin.debug:
+        msg: "Hello, {{student}} is learning {{course}} with a duration of {{duration}}"
+    
+    - name: printing global variable
+      ansible.builtin.debug:
+        msg: "Hello, {{student}} is learning {{course}} with a duration of {{duration}}"
