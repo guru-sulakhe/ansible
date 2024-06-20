@@ -1,0 +1,9 @@
+- name: printing the variables as arguemnets
+  hosts: localhost
+  tasks:
+  - name: accessig variables
+    ansible.builtin.debug:
+      msg: "Hi {{student}} is learning {{course}} with duration of {{duration}}"
+
+# NOTE:
+# while executing the playbook please make sure to insert -e s"student= Guru course=Devops duration=120hrs"

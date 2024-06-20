@@ -1,7 +1,5 @@
 - name: printing variables by accessing inventory
   hosts: localhost
-  vars:
-    student: "Guru"
   tasks:
     - name: priting information
       ansible.builtin.debug:
