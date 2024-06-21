@@ -4,6 +4,7 @@
   tasks:
   - name: checking user is added or not
     ansible.builtin.command: id expense
+    ignore_errors: yes
     
 
   - name: printing hello if is true
