@@ -1,5 +1,5 @@
 - name: checking condition of whether the user is existed or not
-  hosts: localhost
+  hosts: web
   become: yes
   tasks:
   - name: checking user is added or not
