@@ -7,4 +7,5 @@
     
 
   - name: printing hello if is true
-    msg: "Hello frnd"
+    ansible.builtin.debug:
+      msg: "Hello frnd"
