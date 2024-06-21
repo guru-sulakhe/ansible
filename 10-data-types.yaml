@@ -1,0 +1,17 @@
+- name: printing different datatypes
+  hosts: localhost
+  vars: 
+    course: DevOps with AWS #string
+    tools: #List
+    - Linux
+    - Ansible
+    - docker
+    Expereience: #map or dictionary
+    Devops: 2 #number
+    AWS: 3 
+    Docker: 1
+    realproject: true #boolean
+  tasks: 
+    - name: printing datatypes
+      ansible.builtin.debug:
+        msg: "Hi course is: {{course}} , tools are: {{tools}} , Expereience in {{Expereience}} with a real time project: {{realproject}}"
