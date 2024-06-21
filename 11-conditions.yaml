@@ -4,8 +4,16 @@
   tasks:
   - name: checking user is added or not
     ansible.builtin.command: id expense
+    register: USER
     ignore_errors: yes
     
+  - name: printing users info
+    ansible.builtin.debug:
+      msg: "Users info is : {{USER}}"
+
+  - name: adding user
+    ansible.builtin.command: useradd expense
+    when: USER.rc != 0 # rc is same as exit status in shell 
 
   - name: printing hello if is true
     ansible.builtin.debug:
