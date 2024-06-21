@@ -1,0 +1,10 @@
+- name: checking condition of whether the user is existed or not
+  hosts: web
+  become: yes
+  tasks:
+  - name: checking user is added or not
+    ansible.builtin.command: id expense
+    
+
+  - name: printing hello if is true
+    msg: "Hello frnd"
