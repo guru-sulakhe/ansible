@@ -3,4 +3,4 @@
   tasks:
     - name: printing default
       ansible.builtin.debug:
-        msg: " welcome to {{| default('hyderabad') }}"
+        msg: " welcome to {{city | default('hyderabad') }}"
