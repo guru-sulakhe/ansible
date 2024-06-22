@@ -13,3 +13,12 @@
     - name: converitng to upper case
       ansible.builtin.debug:
         msg: "{{greeting | upper}}"
+
+- name: lower case filter
+  hosts: localhost
+  vars:
+    greeting: "Hello, Good Afternoon"
+  tasks:
+    - name: converitng to lower case
+      ansible.builtin.debug:
+        msg: "{{greeting | lower}}"
