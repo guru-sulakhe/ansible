@@ -1,0 +1,6 @@
+- name: different filters
+  hosts: localhost
+  tasks:
+    - name: printing default
+      ansible.builtin.debug:
+        msg: " welcome to {{| default('hyderabad') }}"
