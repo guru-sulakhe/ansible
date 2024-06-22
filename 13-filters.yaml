@@ -40,3 +40,20 @@
     - name: min and max number
       ansible.builtin.debug:
         msg: "minimum age is {{ age | min}}, maximum age is {{age | max}}"
+
+- name: converting dictionary into items
+  hosts: localhost
+  vars:
+    my_dict:  #this is a dictionary,map or key/pair values
+    Course: "Devops with AWS"
+    Student: "Guru"
+    Duration: "120hrs"
+  tasks: 
+    - name: before conversion
+      ansible.builtin.debug:
+      msg: "before conversion: {{my_dict}}"
+    - name: after conversion
+      ansible.builtin.debug:
+      msg: "after conversion: {{ my_dict | dict2items }}"
+
+    
