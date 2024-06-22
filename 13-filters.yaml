@@ -45,9 +45,9 @@
   hosts: localhost
   vars:
     my_dict:  #this is a dictionary,map or key/pair values
-    Course: "Devops with AWS"
-    Student: "Guru"
-    Duration: "120hrs"
+      Course: "Devops with AWS"
+      Student: "Guru"
+      Duration: "120hrs"
   tasks: 
     - name: before conversion
       ansible.builtin.debug:
