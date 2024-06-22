@@ -57,4 +57,22 @@
       ansible.builtin.debug:
         msg: "after conversion: {{ my_dict | dict2items }}"
 
+
+- name: converting items into dictionary
+  hosts: localhost
+  vars:
+    my_dict:  #this is a dictionary,map or key/pair values
+      - {'key' : Course, 'value' : 'AWS' }
+      - {'key' : Student, 'value' : 'Guru' }
+      - {'key' : Duration, 'value' : '120hrs' }
+  tasks: 
+    - name: before conversion
+      ansible.builtin.debug:
+       msg: "before conversion: {{my_dict}}"
+
+    - name: after conversion
+      ansible.builtin.debug:
+        msg: "after conversion: {{ my_dict | dict2items }}"
+
+    
     
