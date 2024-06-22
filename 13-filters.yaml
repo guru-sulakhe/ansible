@@ -1,6 +1,15 @@
-- name: different filters
+- name: default filter
   hosts: localhost
   tasks:
     - name: printing default
       ansible.builtin.debug:
         msg: " welcome to {{city | default('hyderabad') }}"
+    
+- name: upper case filter
+  hosts: localhost
+  vars:
+    greeting: "Hello, Good Afternoon"
+  tasks:
+    - name: converitng to upper case
+      ansible.builtin.debug:
+        msg: "{{greeting | upper}}"
