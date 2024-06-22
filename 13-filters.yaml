@@ -51,10 +51,10 @@
   tasks: 
     - name: before conversion
       ansible.builtin.debug:
-      msg: "before conversion: {{my_dict}}"
-      
+       msg: "before conversion: {{my_dict}}"
+
     - name: after conversion
       ansible.builtin.debug:
-      msg: "after conversion: {{ my_dict | dict2items }}"
+        msg: "after conversion: {{ my_dict | dict2items }}"
 
     
