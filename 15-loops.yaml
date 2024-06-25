@@ -1,5 +1,6 @@
 - name: installing and removing packages
   hosts: web
+  become: yes
   tasks: 
     - name: install and remove package
       ansible.builtin.dnf:
