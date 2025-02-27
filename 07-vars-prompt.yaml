@@ -6,7 +6,7 @@
       private: false
     - name: PASSWORD
       prompt: please enter the password
-      private: true
+      private: true # hiding the entered password for user's safety purpose
   tasks:
     - name: printing prompt variables
       ansible.builtin.debug:

@@ -8,7 +8,7 @@
     - name: number is less than 10
       ansible.builtin.debug:
         msg: "Given number {{number}} is less than 10"
-      when: number | int < 10
+      when: number | int < 10 # | int is a filter used to convert text to integer
 
     - name: number is greater than 10
       ansible.builtin.debug:

@@ -3,8 +3,8 @@
   become: yes
   tasks:
   - name: checking user is added or not
-    ansible.builtin.command: id expense
-    register: USER
+    ansible.builtin.command: id expense # ansible running the command in server
+    register: USER   # expense data is stored in USER variable
     ignore_errors: yes
     
   - name: printing users info
@@ -12,8 +12,8 @@
       msg: "Users info is : {{USER}}"
 
   - name: adding user
-    ansible.builtin.command: useradd expense
-    when: USER.rc != 0 # rc is same as exit status in shell 
+    ansible.builtin.command: useradd expense #This command will be executed after checking the user, if not expense user will be created
+    when: USER.rc != 0 # rc is same as exit status in shell and this will be run before adding expense user
 
   - name: printing hello if is true
     ansible.builtin.debug:

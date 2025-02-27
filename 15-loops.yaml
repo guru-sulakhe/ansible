@@ -9,7 +9,7 @@
 
       loop:
       - { name: 'mysql', state: 'latest' } # state:latest refers to installing of package
-      - { name: 'nginx', state: 'absent' }
+      - { name: 'nginx', state: 'absent' } # state:absent refers to removing of package
       - { name: 'postfix', state: 'absent' }
     
 
